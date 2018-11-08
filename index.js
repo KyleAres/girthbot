@@ -40,7 +40,7 @@ function processCommand(message) => {
 		return;
 	}
 
-	message.channel.send("Message received from " + receivedMessage.author.toString() + ": " + receivedMessage.content)
+	message.channel.send("Message received from " + receivedMessage.author.toString() + ": " + receivedMessage.content);
 
 
 
