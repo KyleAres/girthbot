@@ -28,7 +28,7 @@ client.on("message", (message) => {
 	//if(!message.content.startsWith(prefix)) return;
  */
 //start function - to be split between functions
-function processCommand(message) => {
+function processCommand(message) {
 	
 	//idk strange split commandd
 	let args = message.content.slice(prefix.length).trim().split(/ +/g);
