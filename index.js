@@ -16,7 +16,7 @@ client.on("message", (message) => {
     }
     
     if (message.content.startsWith(prefix)) {
-        processCommand(message);
+        processCommand(message)
     }
 /*
 	THIS IS SAME AS ABOVE
@@ -31,8 +31,8 @@ client.on("message", (message) => {
 function processCommand(message) {
 	
 	//idk strange split commandd
-	const args = message.content.slice(prefix.length).trim().split(/ +/g);
-	const command = args.shift().toLowerCase();
+	let args = message.content.slice(prefix.length).trim().split(/ +/g);
+	let command = args.shift().toLowerCase();
 
 	// reply
 	if(message.content.startsWith(prefix + "git")){
@@ -42,7 +42,10 @@ function processCommand(message) {
 
 	message.channel.send("Message received from " + receivedMessage.author.toString() + ": " + receivedMessage.content)
 
+
+
 }
+	
 /*
 	var generalChannel = client.channels.get("123456789") // Replace with known channel ID
   
@@ -54,4 +57,8 @@ function processCommand(message) {
     const webAttachment = new Discord.Attachment('https://www.devdungeon.com/sites/all/themes/devdungeon2/logo.png')
     generalChannel.send(webAttachment)
 */
-client.login(token);
+
+
+
+
+client.login(token)
