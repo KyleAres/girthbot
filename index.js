@@ -54,4 +54,4 @@ function processCommand(message) {
     const webAttachment = new Discord.Attachment('https://www.devdungeon.com/sites/all/themes/devdungeon2/logo.png')
     generalChannel.send(webAttachment)
 */
-client.login(token)
+client.login(token);
