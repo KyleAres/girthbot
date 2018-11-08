@@ -21,7 +21,8 @@ client.on("message", (message) => {
 		let command = args.shift().toLowerCase();
 		console.log("args = " + args);
 		console.log("command = " + command);
-		
+		message.channel.send("args = " + args);
+		message.channel.send("command = " + command);
         
         //if (command.)
         processCommand(message);
@@ -38,8 +39,6 @@ client.on("message", (message) => {
  */
 //start function - to be split between functions
 function processCommand(message) {
-	
-	
 
 	// added via https://github.com/gsuitedevs/node-samples/blob/master/sheets/quickstart/index.js
 	const fs = require('fs');
@@ -48,14 +47,18 @@ function processCommand(message) {
 
 	// If modifying these scopes, delete token.jsopn.
 	const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
-	const TOKEN_PATH = 'config.json';
+	//const TOKEN_PATH = 'config.json';
 
 	// reply
 	if(message.content.startsWith(prefix + "git")){
-		message.channel.send("gud");
+		message.channel.send("gay\nand gud\n\nPraise the Hippo\nchode 4 lyfe");
 		return;
 	}
+	if(message.content.startsWith(prefix + "sheet")){
+		message.channel.send("spreadsheetCommand ACTIVATED");
 
+		return;
+	}
 	message.channel.send("Message received from " + receivedMessage.author.toString() + ": " + receivedMessage.content);
 }
 
