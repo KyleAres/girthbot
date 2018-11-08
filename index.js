@@ -16,7 +16,7 @@ client.on("message", (message) => {
     }
     
     if (message.content.startsWith(prefix)) {
-        processCommand(message)
+        processCommand(message);
     }
 /*
 	THIS IS SAME AS ABOVE
