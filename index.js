@@ -60,7 +60,7 @@ function processCommand(message) {
 }
 
 //let scdbgay = ['https://docs.google.com/spreadsheets/d/1PGPH8oWvZyplPGdZNB1p_0h_RwCp3oCABWDMzGblZf4/edit#gid=998208401'];
-
+/*
 function spreadsheetCommand(message) {
   const sheets = google.sheets({version: 'v4', auth});
   sheets.spreadsheets.values.get({
