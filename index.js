@@ -12,7 +12,7 @@ client.on("ready", () => console.log(`Bot has started, with ${client.users.size}
 client.on("message", (message) => {
 	
 	if (message.author == client.user) { // Prevent bot from responding to its own messages
-        return
+        return;
     }
     
     if (message.content.startsWith(prefix)) {
@@ -20,7 +20,8 @@ client.on("message", (message) => {
 		let args = message.content.slice(prefix.length).trim().split(/ +/g);
 		let command = args.shift().toLowerCase();
         
-        if (message.content.starprocessCommand(message)
+        //if (command.)
+        processCommand(message);
     }
 })
 /*
