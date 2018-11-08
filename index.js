@@ -21,7 +21,7 @@ client.on("message", (message) => {
 		let command = args.shift().toLowerCase();
 		console.log("args = " + args);
 		console.log("command = " + command);
-		return;
+		
         
         //if (command.)
         processCommand(message);
