@@ -42,9 +42,6 @@ function processCommand(message) {
 	}
 
 	message.channel.send("Message received from " + receivedMessage.author.toString() + ": " + receivedMessage.content);
-
-
-
 }
 	
 /*
