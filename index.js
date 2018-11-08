@@ -18,6 +18,7 @@ client.on("message", (message) => {
     if (message.content.startsWith(prefix)) {
         processCommand(message)
     }
+}
 /*
 	THIS IS SAME AS ABOVE
 	// Prevent bot from responding to its own messages
