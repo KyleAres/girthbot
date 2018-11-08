@@ -19,6 +19,7 @@ client.on("message", (message) => {
     	// idk strange split command
 		let args = message.content.slice(prefix.length).trim().split(/ +/g);
 		let command = args.shift().toLowerCase();
+
         
         //if (command.)
         processCommand(message);
@@ -36,8 +37,9 @@ client.on("message", (message) => {
 //start function - to be split between functions
 function processCommand(message) {
 	
-	console.log("args = " + args) return;
-	console.log("command = " + command) return;
+	console.log("args = " + args);
+	console.log("command = " + command);
+	return;
 
 	// added via https://github.com/gsuitedevs/node-samples/blob/master/sheets/quickstart/index.js
 	const fs = require('fs');
