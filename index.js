@@ -61,4 +61,4 @@ function processCommand(message) {
 
 
 
-client.login(token);
+client.login(token)
