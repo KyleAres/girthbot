@@ -42,7 +42,7 @@ function processCommand(message) {
 
 	// added via https://github.com/gsuitedevs/node-samples/blob/master/sheets/quickstart/index.js
 	const fs = require('fs');
-	const readline = required('linebyline');
+	const linebyline = required('linebyline');
 	const {google} = require('googleapis');
 
 	// If modifying these scopes, delete token.jsopn.
@@ -56,19 +56,19 @@ function processCommand(message) {
 	}
 	if(message.content.startsWith(prefix + "sheet")){
 		message.channel.send("spreadsheetCommand ACTIVATED");
-
+		spreadsheetCommand(message)
 		return;
 	}
 	message.channel.send("Message received from " + receivedMessage.author.toString() + ": " + receivedMessage.content);
 }
 
 //let scdbgay = ['https://docs.google.com/spreadsheets/d/1PGPH8oWvZyplPGdZNB1p_0h_RwCp3oCABWDMzGblZf4/edit#gid=998208401'];
-/*
+
 function spreadsheetCommand(message) {
   const sheets = google.sheets({version: 'v4', auth});
   sheets.spreadsheets.values.get({
-    spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
-    range: 'Class Data!A2:E',
+    spreadsheetId: '1PGPH8oWvZyplPGdZNB1p_0h_RwCp3oCABWDMzGblZf4',
+    range: 'Class weapon!A2:E',
   }, (err, res) => {
     if (err) return console.log('The API returned an error: ' + err);
     const rows = res.data.values;
