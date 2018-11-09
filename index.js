@@ -61,7 +61,7 @@ function spreadsheetCommand(message) {
 
 	// If modifying these scopes, delete token.jsopn.
 	const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
-	//const TOKEN_PATH = 'config.json';
+	const TOKEN_PATH = 'config.json';
 	const sheets = google.sheets({version: 'v4', message});
 	sheets.spreadsheets.values.get({
 		spreadsheetId: '1PGPH8oWvZyplPGdZNB1p_0h_RwCp3oCABWDMzGblZf4',
