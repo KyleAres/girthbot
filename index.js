@@ -1,9 +1,14 @@
 const Discord = require("discord.js");
 const client = new Discord.Client({ disableEveryone: true });
-const { token, prefix } = require("./config.json");
+const { token, prefix, scope } = require("./config.json");
 const fs = require('fs');
 const readline = require('linebyline');
 const {google} = require('googleapis');
+
+// If modifying these scopes, delete token.jsopn.
+//const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
+//const TOKEN_PATH = 'config.json';
+const sheets = google.sheets({version: 'v4', message});
 
 client.on("ready", () => console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`));
 // Example of changing the bot's playing game to something useful. `client.user` is what the
@@ -60,10 +65,6 @@ function spreadsheetCommand(message) {
 
 	message.channel.send("spreadsheetCommand RUNNING");
 
-	// If modifying these scopes, delete token.jsopn.
-	const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
-	const TOKEN_PATH = 'config.json';
-	const sheets = google.sheets({version: 'v4', message});
 	sheets.spreadsheets.values.get({
 		spreadsheetId: '1PGPH8oWvZyplPGdZNB1p_0h_RwCp3oCABWDMzGblZf4',
 		range: 'Class weapon!A2:E',
