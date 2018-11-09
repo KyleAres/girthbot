@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client({ disableEveryone: true });
-const { token, prefix, scope } = require("./config.json");
+const { token, prefix, scope, client_secret, client_id, redirect_uris } = require("./config.json");
 const fs = require('fs');
 const readline = require('linebyline');
 const {google} = require('googleapis');
