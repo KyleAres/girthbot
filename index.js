@@ -42,7 +42,7 @@ function processCommand(message) {
 
 	// added via https://github.com/gsuitedevs/node-samples/blob/master/sheets/quickstart/index.js
 	const fs = require('fs');
-	const readline = required('readline');
+	const readline = required('linebyline');
 	const {google} = require('googleapis');
 
 	// If modifying these scopes, delete token.jsopn.
