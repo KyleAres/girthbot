@@ -42,7 +42,7 @@ client.on("message", (message) => {
 function processCommand(message) {
 	// reply
 	if(message.content.startsWith(prefix + "git")){
-		message.channel.send("gay\nand gud\n\nPraise the Hippo\nchode 4 lyfe");
+		message.channel.send("\ngay\nand gud\n\nPraise the Hippo\nchode 4 lyfe");
 		return;
 	}
 	if(message.content.startsWith(prefix + "sheet")){
@@ -50,7 +50,7 @@ function processCommand(message) {
 		spreadsheetCommand(message);
 		return;
 	}
-	message.channel.send("Message received from " + receivedMessage.author.toString() + ": " + receivedMessage.content);
+	//message.channel.send("Message received from " + receivedMessage.author.toString() + ": " + receivedMessage.content);
 };
 
 //let scdbgay = ['https://docs.google.com/spreadsheets/d/1PGPH8oWvZyplPGdZNB1p_0h_RwCp3oCABWDMzGblZf4/edit#gid=998208401'];
