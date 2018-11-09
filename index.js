@@ -40,14 +40,7 @@ client.on("message", (message) => {
 //start function - to be split between functions
 function processCommand(message) {
 
-	// added via https://github.com/gsuitedevs/node-samples/blob/master/sheets/quickstart/index.js
-	const fs = require('fs');
-	const linebyline = required('linebyline');
-	const {google} = require('googleapis');
-
-	// If modifying these scopes, delete token.jsopn.
-	const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
-	//const TOKEN_PATH = 'config.json';
+	
 
 	// reply
 	if(message.content.startsWith(prefix + "git")){
@@ -56,7 +49,7 @@ function processCommand(message) {
 	}
 	if(message.content.startsWith(prefix + "sheet")){
 		message.channel.send("spreadsheetCommand ACTIVATED");
-		spreadsheetCommand(message)
+		spreadsheetCommand(message);
 		return;
 	}
 	message.channel.send("Message received from " + receivedMessage.author.toString() + ": " + receivedMessage.content);
@@ -65,21 +58,29 @@ function processCommand(message) {
 //let scdbgay = ['https://docs.google.com/spreadsheets/d/1PGPH8oWvZyplPGdZNB1p_0h_RwCp3oCABWDMzGblZf4/edit#gid=998208401'];
 
 function spreadsheetCommand(message) {
-  const sheets = google.sheets({version: 'v4', auth});
-  sheets.spreadsheets.values.get({
-    spreadsheetId: '1PGPH8oWvZyplPGdZNB1p_0h_RwCp3oCABWDMzGblZf4',
-    range: 'Class weapon!A2:E',
-  }, (err, res) => {
-    if (err) return console.log('The API returned an error: ' + err);
-    const rows = res.data.values;
-    if (rows.length) {
-      console.log('Name, Major:');
-      // Print columns A and E, which correspond to indices 0 and 4.
-      rows.map((row) => {
-        console.log(`${row[0]}, ${row[4]}`);
-      });
-    } else {
-      console.log('No data found.');
+	// added via https://github.com/gsuitedevs/node-samples/blob/master/sheets/quickstart/index.js
+	const fs = require('fs');
+	const linebyline = required('linebyline');
+	const {google} = require('googleapis');
+
+	// If modifying these scopes, delete token.jsopn.
+	const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
+	//const TOKEN_PATH = 'config.json';
+	const sheets = google.sheets({version: 'v4', auth});
+	sheets.spreadsheets.values.get({
+		spreadsheetId: '1PGPH8oWvZyplPGdZNB1p_0h_RwCp3oCABWDMzGblZf4',
+		range: 'Class weapon!A2:E',
+	}, (err, res) => {
+	if (err) return console.log('The API returned an error: ' + err);
+	const rows = res.data.values;
+	if (rows.length) {
+		console.log('Name, Major:');
+		// Print columns A and E, which correspond to indices 0 and 4.
+		rows.map((row) => {
+		console.log(`${row[0]}, ${row[4]}`);
+		});
+	} else {
+	console.log('No data found.');
     }
   });
 	
