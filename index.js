@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client({ disableEveryone: true });
 const { token, prefix } = require("./config.json");
 const fs = require('fs');
-const readline = required('readline.js');
+const readline = require('readline.js');
 const {google} = require('googleapis');
 
 client.on("ready", () => console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`));
