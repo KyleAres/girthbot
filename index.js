@@ -58,6 +58,7 @@ function processCommand(message) {
 function spreadsheetCommand(message) {
 	// added via https://github.com/gsuitedevs/node-samples/blob/master/sheets/quickstart/index.js
 
+	message.channel.send("spreadsheetCommand RUNNING");
 
 	// If modifying these scopes, delete token.jsopn.
 	const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
