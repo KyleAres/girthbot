@@ -129,7 +129,6 @@ function spreadsheetCommand(message) {
 		}
 	});
 };
-
 /*
 	var generalChannel = client.channels.get("123456789") // Replace with known channel ID
   
@@ -141,8 +140,4 @@ function spreadsheetCommand(message) {
     const webAttachment = new Discord.Attachment('https://www.devdungeon.com/sites/all/themes/devdungeon2/logo.png')
     generalChannel.send(webAttachment)
 */
-
-
-
-
 client.login(token);
