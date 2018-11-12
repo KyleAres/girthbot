@@ -115,7 +115,7 @@ function spreadsheetCommand(message) {
 	sheets.spreadsheets.values.get({
 		spreadsheetId: '1PGPH8oWvZyplPGdZNB1p_0h_RwCp3oCABWDMzGblZf4',
 		range: 'Class weapon!A2:E',
-	}), (err, res) => {
+	}, (err, res) => {
 		if (err) return console.log('The API returned an error: ' + err);
 		const rows = res.data.values;
 		if (rows.length) {
@@ -127,7 +127,7 @@ function spreadsheetCommand(message) {
 		} else {
 			console.log('No data found.');
 		}
-	};
+	});
 };
 /*
 	var generalChannel = client.channels.get("123456789") // Replace with known channel ID
