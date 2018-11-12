@@ -127,8 +127,8 @@ function spreadsheetCommand(message) {
 		} else {
 			console.log('No data found.');
 		}
-	});
-};
+	};
+});
 /*
 	var generalChannel = client.channels.get("123456789") // Replace with known channel ID
   
