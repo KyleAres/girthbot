@@ -21,8 +21,8 @@ fs.readFile('config.json', (err, content) => {
 function authorize(credentials, callback) {
 	//const {client_secret, client_id, redirect_uris} = credentials.installed;
 	const oAuth2Client = new google.auth.OAuth2(client_id, client_secret); //redirect_uris[0]
-}
-/*
+
+
 // Check if we have previously stored a token.
 	fs.readFile(token, (err, token) => {
 		if (err) return getNewToken(oAuth2Client, callback);
@@ -30,7 +30,7 @@ function authorize(credentials, callback) {
 		callback(oAuth2Client);
 	});
 }
-*/
+
 /**
  * Get and store new token after prompting for user authorization, and then
  * execute the given callback with the authorized OAuth2 client.
@@ -116,7 +116,7 @@ function spreadsheetCommand(message) {
 	console.log(sheets);
 	sheets.spreadsheets.values.get({
 		spreadsheetId: '1PGPH8oWvZyplPGdZNB1p_0h_RwCp3oCABWDMzGblZf4',
-		range: 'Class weapon!A2:E',
+		range: 'Class weapon!A2:O',
 	}, (err, res) => {
 		if (err) return console.log('The API returned an error: ' + err);
 		const rows = res.data.values;
