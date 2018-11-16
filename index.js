@@ -111,8 +111,9 @@ function spreadsheetCommand(message) {
 	// If modifying these scopes, delete token.jsopn.
 	//const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
 	//const TOKEN_PATH = 'config.json';
+	//https://docs.google.com/spreadsheets/d/1PGPH8oWvZyplPGdZNB1p_0h_RwCp3oCABWDMzGblZf4/edit#gid=998208401
 	const sheets = google.sheets({version: 'v4', message});
-
+	console.log(sheets);
 	sheets.spreadsheets.values.get({
 		spreadsheetId: '1PGPH8oWvZyplPGdZNB1p_0h_RwCp3oCABWDMzGblZf4',
 		range: 'Class weapon!A2:E',
